@@ -29,8 +29,9 @@ This was created during my time as a student at Code Chrysalis
 A few of the things you can do with champPoolDB:
 
 * Create a list of your champions
-* Champions have name, skills, and your personal stats 
+* Champions have name, stats, tags, and a personal note
 * You can delete and add champions any time
+* Coming soon: Skills per champion
 * Coming soon: Automatic recommendations which champion to master next
 
 ## Feedback

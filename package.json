@@ -8,7 +8,12 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "bluebird": "^3.5.1",
     "express": "^4.16.3",
-    "node": "^10.7.0"
+    "knex": "^0.15.2",
+    "lol-champions": "^8.11.0",
+    "node": "^10.7.0",
+    "pg": "^7.4.3",
+    "request": "^2.87.0"
   }
 }
