@@ -1,6 +1,6 @@
 <h1 align="center"> champPoolDB</h1> <br>
 <p align="center">
-  <img alt="champPoolDB" title="champPoolDB" src="views/images/bannerGithub.png" width="100%">
+  <img alt="champPoolDB" title="champPoolDB" src="views/images/champPoolDB.png" width="363px">
 </p>
 
 <p align="center">
