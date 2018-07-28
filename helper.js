@@ -1,6 +1,6 @@
 const allChamps = require("lol-champions")
 
-const getAllChamps = () => {
+const generateChampsArr = () => {
   const allChampsArr = [];
   allChamps.map((champ) => {
     const champObj = {
@@ -14,6 +14,4 @@ const getAllChamps = () => {
   return allChampsArr
 }
 
-console.log(getAllChamps())
-
-module.exports = { getAllChamps };
+module.exports = { generateChampsArr };

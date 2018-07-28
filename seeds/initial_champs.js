@@ -1,5 +1,5 @@
-const { getAllChamps } = require("../helper")
-const allChamps = getAllChamps();
+const { generateChampsArr } = require("../helper")
+const allChamps = generateChampsArr();
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries

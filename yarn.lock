@@ -364,6 +364,10 @@ expand-tilde@^2.0.0, expand-tilde@^2.0.2:
   dependencies:
     homedir-polyfill "^1.0.1"
 
+express-json@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/express-json/-/express-json-1.0.0.tgz#9fdd53239ad0a6f3e076f54585d8a2243075fb36"
+
 express@^4.16.3:
   version "4.16.3"
   resolved "https://registry.yarnpkg.com/express/-/express-4.16.3.tgz#6af8a502350db3246ecc4becf6b5a34d22f7ed53"
