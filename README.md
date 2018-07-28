@@ -1,4 +1,3 @@
-<h1 align="center"> champPoolDB</h1> <br>
 <p align="center">
   <img alt="champPoolDB" title="champPoolDB" src="views/images/bannerGithub.png" width="100%">
 </p>
