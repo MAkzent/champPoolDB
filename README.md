@@ -1,7 +1,6 @@
 # champPoolDB
-A personal League of Legends champion pool database
+This was created during my time as a student at Code Chrysalis
 
-<h1 align="center"> champPoolDB </h1> <br>
 <p align="center">
   <img alt="champPoolDB" title="champPoolDB" src="images/champPoolDB.png" width="300">
 </p>
