@@ -5,8 +5,11 @@ const app = express();
 const Promise = require("bluebird");
 const { getAllChamps, queryChamps } = require("./controller");
 
+app.use(express.static("views"));
+//Store all HTML files in view folder.
+
 // initial route
-app.get("/", (req, res) => res.send("Whaddup World?!"));
+app.get("/", (req, res) => res.sendFile("index.html"));
 
 // GET requests -> async becuase we talk to the DB
 // Options:
