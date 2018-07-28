@@ -1,0 +1,14 @@
+{
+  "name": "champpooldb",
+  "version": "1.0.0",
+  "description": "Your personal league of legends champions pool db",
+  "main": "index.js",
+  "repository": "https://github.com/MAkzent/champPoolDB.git",
+  "author": "MAkzent <arnold.michael91@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.16.3",
+    "node": "^10.7.0"
+  }
+}
