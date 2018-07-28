@@ -3,7 +3,7 @@ A personal League of Legends champion pool database
 
 <h1 align="center"> champPoolDB </h1> <br>
 <p align="center">
-  <img alt="champPoolDB" title="champPoolDB" src="images/logo.png" width="158">
+  <img alt="champPoolDB" title="champPoolDB" src="images/champPoolDB.png" width="158">
 </p>
 
 <p align="center">
@@ -22,7 +22,6 @@ A personal League of Legends champion pool database
 
 ## Introduction
 
-[![Build Status](https://img.shields.io/travis/gitpoint/git-point.svg?style=flat-square)](https://travis-ci.org/gitpoint/git-point)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 Views your champions, add new champions, and get your stats for each champ - all in one database and 100% open source. 
