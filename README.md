@@ -3,7 +3,7 @@ A personal League of Legends champion pool database
 
 <h1 align="center"> champPoolDB </h1> <br>
 <p align="center">
-  <img alt="champPoolDB" title="champPoolDB" src="https://imgur.com/QZo2JmO" width="158">
+  <img alt="champPoolDB" title="champPoolDB" src="images/logo.png" width="158">
 </p>
 
 <p align="center">
