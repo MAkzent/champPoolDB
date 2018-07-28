@@ -1,6 +1,4 @@
-# champPoolDB
-This was created during my time as a student at Code Chrysalis
-
+<h1 align="center"> champPoolDB</h1> <br>
 <p align="center">
   <img alt="champPoolDB" title="champPoolDB" src="images/champPoolDB.png" width="300">
 </p>
@@ -23,7 +21,8 @@ This was created during my time as a student at Code Chrysalis
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-Views your champions, add new champions, and get your stats for each champ - all in one database and 100% open source. 
+An API to view your champions, add new champions, and get your stats for each champ - all in one database and 100% open source. 
+This was created during my time as a student at Code Chrysalis
 
 ## Features
 
