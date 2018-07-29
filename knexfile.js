@@ -14,12 +14,10 @@ module.exports = {
       tableName: "knex_migrations",
     },
   },
-  // production: {
-  //   client: 'postgresql',
-  //   connection: {
-  //     database: 'my_db',
-  //     user:     'username',
-  //     password: 'password'
-  //   }
-  // }
+  production: {
+    client: 'postgresql',
+    connection: {
+      database: 'postgres://siweyqhfgunvjz:ac8a550334e3ecae037038c4a5e409b102f89546edfe11ac2da443d16b037f7c@ec2-23-21-216-174.compute-1.amazonaws.com:5432/d4f93mbkr3s0fb',
+    }
+  }
 };
