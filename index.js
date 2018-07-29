@@ -1,29 +1,24 @@
 const express = require("express");
 const app = express();
-// const json = require('express-json');
-// app.use(json());
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 const Promise = require("bluebird");
-const { getAllChamps, queryChamps } = require("./controller");
+const { getAllChamps, queryChamps, queryMyChamps, getAllMyChamps, addChamp, replaceMyDb, deleteChamp, deleteAllChamps } = require("./controller");
 
+//Store all static files in view folder (HTML, CSS, JS).
 app.use(express.static("views"));
-//Store all HTML files in view folder.
 
-// initial route
 app.get("/", (req, res) => res.sendFile("index.html"));
 
-// GET requests -> async becuase we talk to the DB
-// Options:
-// all => shows all champs
-// all?tag=xx => shows all champs with that tag (can only search one tag)
-// all?name=xx => shows champ with that name
 app.get("/all", async (req, res) => {
   const query = Object.keys(req.query)[0];
   if (!query) {
     const allChamps = await getAllChamps();
     res.json(allChamps);
   }
-  if (query === "tag") {
-    const value = req.query.tag;
+  if (query === "tags") {
+    const value = req.query.tags;
     const result = await queryChamps(query, value);
     res.json(result);
   }
@@ -34,10 +29,78 @@ app.get("/all", async (req, res) => {
   } 
 });
 
-// next: 
-// 1. POST champs into my own DB
-// 2. PUT new stuff into the own DB
-// 3. DELETE own DB
-// 4. Frontend
+app.get("/mydb", async (req, res) => {
+  const query = Object.keys(req.query)[0];
+  if (!query) {
+    const allChamps = await getAllMyChamps();
+    res.json(allChamps);
+  }
+  if (query === "tags") {
+    const value = req.query.tags;
+    const result = await queryMyChamps(query, value);
+    res.json(result);
+  }
+  if (query === "name") {
+    const value = req.query.name;
+    const result = await queryMyChamps(query, value);
+    res.json(result);
+  } 
+})
+
+app.post("/mydb/add/:id", async (req, res) => {
+  const input = req.params.id
+  if (input === "random") {
+    const randomId = Math.floor(Math.random() * 141);
+    await addChamp(randomId)
+    const result = await getAllMyChamps();
+    return res.json(result);
+  }
+  if (!Number(input) || Number(input) > 141 || Number(input) < 1){
+    res.send("Please type in a number between 1 and 141 (both included).")
+    return;
+  }
+  if (Number(input)) {
+    await addChamp(input)
+    const result = await getAllMyChamps();
+    return res.json(result);
+  }
+})
+
+app.put("/mydb/reset", async (req, res) => {
+  let newChamps = Object.keys(req.query);
+  await replaceMyDb(newChamps);
+  const allChamps = await getAllMyChamps()
+  res.status(200).json(allChamps);
+})
+
+app.put("/mydb/reset/starter", async (req, res) => {
+  let newChamps = [7,8,33,47,96,133];
+  await replaceMyDb(newChamps);
+  const allChamps = await getAllMyChamps()
+  res.status(200).json(allChamps);
+})
+
+app.put("/mydb/reset/troll", async (req, res) => {
+  let newChamps = [12,22,81,113,117,134]
+  await replaceMyDb(newChamps);
+  const allChamps = await getAllMyChamps()
+  res.status(200).json(allChamps);
+})
+
+app.delete("/mydb/delete", async (req, res) => {
+  await deleteAllChamps();
+  const allChamps = await getAllMyChamps()
+  res.status(200).json(allChamps)
+})
+
+app.delete("/mydb/delete/:id", async (req, res) => {
+  let champId = req.params.id;
+  await deleteChamp(champId);
+  const allChamps = await getAllMyChamps()
+  res.status(200).json(allChamps)
+})
+
+
+console.log("let's go!")
 
 app.listen(3000, () => console.log("Example app listening on port 3000!"));

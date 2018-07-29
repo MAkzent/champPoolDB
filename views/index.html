@@ -32,186 +32,195 @@
         </br> 
         <h4 id="intro">INTRODUCTION</h4>
         <p>
-          Any good League of Legends player needs a reasonably large champion pool. Ideally, you have 3-4 champions per role you're really good at. This helps you to counterpick, adapt to your team, and be a equally good player across different metas. 
+          Any good League of Legends player needs a reasonably large champion pool. Ideally, you have 3-4 champions per role you're really good at. This helps you counterpick, adapt to your team, and be an equally good player across different metas. 
           This little tool is meant to help you track your champion pool, give you stats on how well you mastered a specific champ, and which other champs would be worth exploring based on your playstyle.
           Please keep in mind that this is work in progress - any feedback is much appreciated.
         </p>
         </br>
-        <h4 id="features">FEATURES</h4>
-          <p>You can query the API with the following options:</p>
-     
-        <div class="features">
-          <div id="get">
-            <h5>GET</h5>
-              <p><span>GET "/me"</span> All your champions inside your pool.</p>
-              <p><span>GET "/me?tags=tank"</span> All your tanks.</p>
-              <p><span>GET "/all"</span> All champions in the whole game.</p>
-              <p><span>GET "/all?tags=mage"</span> All mages in the whole game.</p>
-              <p><span>GET "/all?name=ekko"</span> Everything about Ekko.</p>
+        <div class="features-intro" id="features">
+        <h4>FEATURES</h4>
+          <p>The API accesses two tables <span>all_champs</span> and <span>my_champs</span>which is preloaded with 5 random champions out of the total 141 champs.
+          </br> You can query the API with the following options:</p>
           </div>
-          <div id="post">
-            <h5>POST</h5>
-              <p><span>POST "/add/:id"</span> Adds a champion based on ID to your personal DB.</p>
-              <p>List of IDS:</p>
-              <div class="scroll-container">
-                <div class="scrollable-content">
-                   <p> -- Scroll down for more -- </p>
-                   <p> 1 | Aatrox</p>
-                   <p> 2 | Ahri</p>
-                   <p> 3 | Akali</p>
-                   <p> 4 | Alistar</p>
-                   <p> 5 | Amumu</p>
-                   <p> 6 | Anivia</p>
-                   <p> 7 | Annie</p>
-                   <p> 8 | Ashe</p>
-                   <p> 9 | Aurelion Sol</p>
-                   <p>10 | Azir</p>
-                   <p>11 | Bard</p>
-                   <p>12 | Blitzcrank</p>
-                   <p>13 | Brand</p>
-                   <p>14 | Braum</p>
-                   <p>15 | Caitlyn</p>
-                   <p>16 | Camille</p>
-                   <p>17 | Cassiopeia</p>
-                   <p>18 | Cho'Gath</p>
-                   <p>19 | Corki</p>
-                   <p>20 | Darius</p>
-                   <p>21 | Diana</p>
-                   <p>22 | Draven</p>
-                   <p>23 | Dr. Mundo</p>
-                   <p>24 | Ekko</p>
-                   <p>25 | Elise</p>
-                   <p>26 | Evelynn</p>
-                   <p>27 | Ezreal</p>
-                   <p>28 | Fiddlesticks</p>
-                   <p>29 | Fiora</p>
-                   <p>30 | Fizz</p>
-                   <p>31 | Galio</p>
-                   <p>32 | Gangplank</p>
-                   <p>33 | Garen</p>
-                   <p>34 | Gnar</p>
-                   <p>35 | Gragas</p>
-                   <p>36 | Graves</p>
-                   <p>37 | Hecarim</p>
-                   <p>38 | Heimerdinger</p>
-                   <p>39 | Illaoi</p>
-                   <p>40 | Irelia</p>
-                   <p>41 | Ivern</p>
-                   <p>42 | Janna</p>
-                   <p>43 | Jarvan IV</p>
-                   <p>44 | Jax</p>
-                   <p>45 | Jayce</p>
-                   <p>46 | Jhin</p>
-                   <p>47 | Jinx</p>
-                   <p>48 | Kai'Sa</p>
-                   <p>49 | Kalista</p>
-                   <p>50 | Karma</p>
-                   <p>51 | Karthus</p>
-                   <p>52 | Kassadin</p>
-                   <p>53 | Katarina</p>
-                   <p>54 | Kayle</p>
-                   <p>55 | Kayn</p>
-                   <p>56 | Kennen</p>
-                   <p>57 | Kha'Zix</p>
-                   <p>58 | Kindred</p>
-                   <p>59 | Kled</p>
-                   <p>60 | Kog'Maw</p>
-                   <p>61 | LeBlanc</p>
-                   <p>62 | Lee Sin</p>
-                   <p>63 | Leona</p>
-                   <p>64 | Lissandra</p>
-                   <p>65 | Lucian</p>
-                   <p>66 | Lulu</p>
-                   <p>67 | Lux</p>
-                   <p>68 | Malphite</p>
-                   <p>69 | Malzahar</p>
-                   <p>70 | Maokai</p>
-                   <p>71 | Master Yi</p>
-                   <p>72 | Miss Fortune</p>
-                   <p>73 | Wukong</p>
-                   <p>74 | Mordekaiser</p>
-                   <p>75 | Morgana</p>
-                   <p>76 | Nami</p>
-                   <p>77 | Nasus</p>
-                   <p>78 | Nautilus</p>
-                   <p>79 | Nidalee</p>
-                   <p>80 | Nocturne</p>
-                   <p>81 | Nunu</p>
-                   <p>82 | Olaf</p>
-                   <p>83 | Orianna</p>
-                   <p>84 | Ornn</p>
-                   <p>85 | Pantheon</p>
-                   <p>86 | Poppy</p>
-                   <p>87 | Pyke</p>
-                   <p>88 | Quinn</p>
-                   <p>89 | Rakan</p>
-                   <p>90 | Rammus</p>
-                   <p>91 | Rek'Sai</p>
-                   <p>92 | Renekton</p>
-                   <p>93 | Rengar</p>
-                   <p>94 | Riven</p>
-                   <p>95 | Rumble</p>
-                   <p>96 | Ryze</p>
-                   <p>97 | Sejuani</p>
-                   <p>98 | Shaco</p>
-                   <p>99 | Shen</p>
-                  <p>100 | Shyvana</p>
-                  <p>101 | Singed</p>
-                  <p>102 | Sion</p>
-                  <p>103 | Sivir</p>
-                  <p>104 | Skarner</p>
-                  <p>105 | Sona</p>
-                  <p>106 | Soraka</p>
-                  <p>107 | Swain</p>
-                  <p>108 | Syndra</p>
-                  <p>109 | Tahm Kench</p>
-                  <p>110 | Taliyah</p>
-                  <p>111 | Talon</p>
-                  <p>112 | Taric</p>
-                  <p>113 | Teemo</p>
-                  <p>114 | Thresh</p>
-                  <p>115 | Tristana</p>
-                  <p>116 | Trundle</p>
-                  <p>117 | Tryndamere</p>
-                  <p>118 | Twisted Fate</p>
-                  <p>119 | Twitch</p>
-                  <p>120 | Udyr</p>
-                  <p>121 | Urgot</p>
-                  <p>122 | Varus</p>
-                  <p>123 | Vayne</p>
-                  <p>124 | Veigar</p>
-                  <p>125 | Vel'Koz</p>
-                  <p>126 | Vi</p>
-                  <p>127 | Viktor</p>
-                  <p>128 | Vladimir</p>
-                  <p>129 | Volibear</p>
-                  <p>130 | Warwick</p>
-                  <p>131 | Xayah</p>
-                  <p>132 | Xerath</p>
-                  <p>133 | Xin Zhao</p>
-                  <p>134 | Yasuo</p>
-                  <p>135 | Yorick</p>
-                  <p>136 | Zac</p>
-                  <p>137 | Zed</p>
-                  <p>138 | Ziggs</p>
-                  <p>139 | Zilean</p>
-                  <p>140 | Zoe</p>
-                  <p>141 | Zyra</p>
-                  <p> -- End of list -- </p>
-                </div>
-              </div>
+          <div class="features-list">
+            <div id="get">
+              <h5>GET</h5>
+                <p><span>GET "/mydb"</span> All your champions inside your DB.</p>
+                <p><span>GET "/mydb?tags=tank"</span> All your tanks.</p>
+                <p><span>GET "/all"</span> All champions in the whole game.</p>
+                <p><span>GET "/all?tags=mage"</span> All mages in the whole game.</p>
+                <p><span>GET "/all?name=ekko"</span> Everything about Ekko.</p>
+            </div>
+
+            <div id="post">
+                <h5>POST</h5>
+                  <p><span>POST "/mydb/add/:id"</span> Adds a champion based on its ID to your personal DB.</p>
+                  <p><span>POST "/mydb/add/24"</span> Adds Ekko to your personal DB.</p>
+                  <p><span>POST "/mydb/add/random"</span> Adds a random champion to your personal DB.</p>
+                  <p>List of IDs:</p>
+                  <div class="scroll-container">
+                    <div class="scrollable-content">
+                       <p> -- Scroll down for more -- </p>
+                       <p> 1 | Aatrox</p>
+                       <p> 2 | Ahri</p>
+                       <p> 3 | Akali</p>
+                       <p> 4 | Alistar</p>
+                       <p> 5 | Amumu</p>
+                       <p> 6 | Anivia</p>
+                       <p> 7 | Annie</p>
+                       <p> 8 | Ashe</p>
+                       <p> 9 | Aurelion Sol</p>
+                       <p>10 | Azir</p>
+                       <p>11 | Bard</p>
+                       <p>12 | Blitzcrank</p>
+                       <p>13 | Brand</p>
+                       <p>14 | Braum</p>
+                       <p>15 | Caitlyn</p>
+                       <p>16 | Camille</p>
+                       <p>17 | Cassiopeia</p>
+                       <p>18 | Cho'Gath</p>
+                       <p>19 | Corki</p>
+                       <p>20 | Darius</p>
+                       <p>21 | Diana</p>
+                       <p>22 | Draven</p>
+                       <p>23 | Dr. Mundo</p>
+                       <p>24 | Ekko</p>
+                       <p>25 | Elise</p>
+                       <p>26 | Evelynn</p>
+                       <p>27 | Ezreal</p>
+                       <p>28 | Fiddlesticks</p>
+                       <p>29 | Fiora</p>
+                       <p>30 | Fizz</p>
+                       <p>31 | Galio</p>
+                       <p>32 | Gangplank</p>
+                       <p>33 | Garen</p>
+                       <p>34 | Gnar</p>
+                       <p>35 | Gragas</p>
+                       <p>36 | Graves</p>
+                       <p>37 | Hecarim</p>
+                       <p>38 | Heimerdinger</p>
+                       <p>39 | Illaoi</p>
+                       <p>40 | Irelia</p>
+                       <p>41 | Ivern</p>
+                       <p>42 | Janna</p>
+                       <p>43 | Jarvan IV</p>
+                       <p>44 | Jax</p>
+                       <p>45 | Jayce</p>
+                       <p>46 | Jhin</p>
+                       <p>47 | Jinx</p>
+                       <p>48 | Kai'Sa</p>
+                       <p>49 | Kalista</p>
+                       <p>50 | Karma</p>
+                       <p>51 | Karthus</p>
+                       <p>52 | Kassadin</p>
+                       <p>53 | Katarina</p>
+                       <p>54 | Kayle</p>
+                       <p>55 | Kayn</p>
+                       <p>56 | Kennen</p>
+                       <p>57 | Kha'Zix</p>
+                       <p>58 | Kindred</p>
+                       <p>59 | Kled</p>
+                       <p>60 | Kog'Maw</p>
+                       <p>61 | LeBlanc</p>
+                       <p>62 | Lee Sin</p>
+                       <p>63 | Leona</p>
+                       <p>64 | Lissandra</p>
+                       <p>65 | Lucian</p>
+                       <p>66 | Lulu</p>
+                       <p>67 | Lux</p>
+                       <p>68 | Malphite</p>
+                       <p>69 | Malzahar</p>
+                       <p>70 | Maokai</p>
+                       <p>71 | Master Yi</p>
+                       <p>72 | Miss Fortune</p>
+                       <p>73 | Wukong</p>
+                       <p>74 | Mordekaiser</p>
+                       <p>75 | Morgana</p>
+                       <p>76 | Nami</p>
+                       <p>77 | Nasus</p>
+                       <p>78 | Nautilus</p>
+                       <p>79 | Nidalee</p>
+                       <p>80 | Nocturne</p>
+                       <p>81 | Nunu</p>
+                       <p>82 | Olaf</p>
+                       <p>83 | Orianna</p>
+                       <p>84 | Ornn</p>
+                       <p>85 | Pantheon</p>
+                       <p>86 | Poppy</p>
+                       <p>87 | Pyke</p>
+                       <p>88 | Quinn</p>
+                       <p>89 | Rakan</p>
+                       <p>90 | Rammus</p>
+                       <p>91 | Rek'Sai</p>
+                       <p>92 | Renekton</p>
+                       <p>93 | Rengar</p>
+                       <p>94 | Riven</p>
+                       <p>95 | Rumble</p>
+                       <p>96 | Ryze</p>
+                       <p>97 | Sejuani</p>
+                       <p>98 | Shaco</p>
+                       <p>99 | Shen</p>
+                      <p>100 | Shyvana</p>
+                      <p>101 | Singed</p>
+                      <p>102 | Sion</p>
+                      <p>103 | Sivir</p>
+                      <p>104 | Skarner</p>
+                      <p>105 | Sona</p>
+                      <p>106 | Soraka</p>
+                      <p>107 | Swain</p>
+                      <p>108 | Syndra</p>
+                      <p>109 | Tahm Kench</p>
+                      <p>110 | Taliyah</p>
+                      <p>111 | Talon</p>
+                      <p>112 | Taric</p>
+                      <p>113 | Teemo</p>
+                      <p>114 | Thresh</p>
+                      <p>115 | Tristana</p>
+                      <p>116 | Trundle</p>
+                      <p>117 | Tryndamere</p>
+                      <p>118 | Twisted Fate</p>
+                      <p>119 | Twitch</p>
+                      <p>120 | Udyr</p>
+                      <p>121 | Urgot</p>
+                      <p>122 | Varus</p>
+                      <p>123 | Vayne</p>
+                      <p>124 | Veigar</p>
+                      <p>125 | Vel'Koz</p>
+                      <p>126 | Vi</p>
+                      <p>127 | Viktor</p>
+                      <p>128 | Vladimir</p>
+                      <p>129 | Volibear</p>
+                      <p>130 | Warwick</p>
+                      <p>131 | Xayah</p>
+                      <p>132 | Xerath</p>
+                      <p>133 | Xin Zhao</p>
+                      <p>134 | Yasuo</p>
+                      <p>135 | Yorick</p>
+                      <p>136 | Zac</p>
+                      <p>137 | Zed</p>
+                      <p>138 | Ziggs</p>
+                      <p>139 | Zilean</p>
+                      <p>140 | Zoe</p>
+                      <p>141 | Zyra</p>
+                      <p> -- End of list -- </p>
+                    </div>
+                  </div>
+            </div>
+
+            <div id="put">
+              <h5>PUT</h5>
+                <p><span>PUT "/mydb/reset?:id"</span> Replace my_champs DB with new champs</p>
+                <p><span>PUT "/mydb/reset?2&34&62"</span> Replaced your DB with Ahri, Gnar, and Lee Sin.</p>
+                <p><span>PUT "/mydb/reset/starter"</span> Replaces your DB with suggested starter champs.</p>
+                <p><span>PUT "/mydb/reset/troll"</span> Turns your DB into a clownfiesta 🤡</p>
+            </div>
+
+            <div id="delete">
+              <h5>DELETE</h5>
+                <p><span>DELETE "/mydb/delete/:id"</span> Deletes a champion inside your DB based on its ID (use the champion from the table above)</p>
+                <p><span>DELETE "/mydb/delete"</span> Deletes all champions inside your DB.</p>
+            </div> 
           </div>
-
-          <div id="put">
-            <h5>PUT</h5>
-            Stuff you can do with a PUT request. 
-          </div>  
-
-          <div id="delete">
-            <h5>DELETE</h5>
-            Stuff you can do with a DELETE request. 
-          </div> 
-        </div>
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ a {
 }
 
 .container {
-  height: 1300px;
+  height: 1400px;
   background-color: rgb(240, 240, 240);
 }
 
@@ -59,7 +59,7 @@ a {
   padding-bottom: 50px;
 }
 
-.features span {
+.features-list span {
   font-family: 'Courier New', Courier, monospace;
   background: rgb(224, 224, 224);
   padding: 3px;
@@ -68,10 +68,12 @@ a {
 
 .scroll-container  {
   height: 150px;
+  width: 300px;
 }
 
 .scrollable-content {
   height: 140px;
+  width: 300px;
   overflow: auto;
   line-height: 1em;
 }
@@ -79,4 +81,10 @@ a {
 .scrollable-content p{
   font-family: 'Courier New', Courier, monospace;
   margin: 5px;
+}
+
+.features-intro span {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 3px;
+  margin: 0 5px;
 }
