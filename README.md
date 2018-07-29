@@ -4,7 +4,7 @@
 <p align="center">
   Your personal League of Legends champion-pool database.
 </p>
-<p align="center">
+
   [Check out the demo!](https://champpooldb.herokuapp.com/)
 </p>
 
