@@ -15,17 +15,17 @@ app.get("/all", async (req, res) => {
   const query = Object.keys(req.query)[0];
   if (!query) {
     const allChamps = await getAllChamps();
-    res.json(allChamps);
+    res.status(200).json(allChamps);
   }
   if (query === "tags") {
     const value = req.query.tags;
     const result = await queryChamps(query, value);
-    res.json(result);
+    res.status(200).json(result);
   }
   if (query === "name") {
     const value = req.query.name;
     const result = await queryChamps(query, value);
-    res.json(result);
+    res.status(200).json(result);
   } 
 });
 
@@ -33,17 +33,17 @@ app.get("/mydb", async (req, res) => {
   const query = Object.keys(req.query)[0];
   if (!query) {
     const allChamps = await getAllMyChamps();
-    res.json(allChamps);
+    res.status(200).json(allChamps);
   }
   if (query === "tags") {
     const value = req.query.tags;
     const result = await queryMyChamps(query, value);
-    res.json(result);
+    res.status(200).json(result);
   }
   if (query === "name") {
     const value = req.query.name;
     const result = await queryMyChamps(query, value);
-    res.json(result);
+    res.status(200).json(result);
   } 
 })
 
@@ -53,7 +53,7 @@ app.post("/mydb/add/:id", async (req, res) => {
     const randomId = Math.floor(Math.random() * 141);
     await addChamp(randomId)
     const result = await getAllMyChamps();
-    return res.json(result);
+    return res.status(200).json(result);
   }
   if (!Number(input) || Number(input) > 141 || Number(input) < 1){
     res.send("Please type in a number between 1 and 141 (both included).")
@@ -62,7 +62,7 @@ app.post("/mydb/add/:id", async (req, res) => {
   if (Number(input)) {
     await addChamp(input)
     const result = await getAllMyChamps();
-    return res.json(result);
+    return res.status(200).json(result);
   }
 })
 
@@ -100,7 +100,6 @@ app.delete("/mydb/delete/:id", async (req, res) => {
   res.status(200).json(allChamps)
 })
 
-
 console.log("let's go!")
 
-app.listen(process.env.PORT || 5000);
+module.exports = app.listen(process.env.PORT || 5000)

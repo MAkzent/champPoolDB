@@ -8,17 +8,22 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "mocha"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
     "express": "^4.16.3",
     "express-json": "^1.0.0",
     "knex": "^0.15.2",
     "lol-champions": "^8.11.0",
+    "mocha": "^5.2.0",
     "node": "^10.7.0",
     "pg": "^7.4.3",
-    "request": "^2.87.0"
+    "request": "2.83.0",
+    "sinon": "^6.1.4"
   }
 }
