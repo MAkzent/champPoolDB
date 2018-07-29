@@ -7,6 +7,9 @@
   "author": "MAkzent <arnold.michael91@gmail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
