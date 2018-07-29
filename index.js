@@ -103,4 +103,4 @@ app.delete("/mydb/delete/:id", async (req, res) => {
 
 console.log("let's go!")
 
-app.listen(3000, () => console.log("Example app listening on port 3000!"));
+app.listen(process.env.PORT || 5000);
