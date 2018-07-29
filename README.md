@@ -20,7 +20,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 An API to view your champions, add new champions, and get your stats for each champ - all in one database and 100% open source. 
-This was created during my time as a student at Code Chrysalis
+This was created during my time as a student at Code Chrysalis using Node, Express, Postgres, and Knex.
 [You can check out the demo here!](https://champpooldb.herokuapp.com/)
 
 ## Features
