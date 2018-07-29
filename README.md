@@ -1,3 +1,4 @@
+
 <p align="center">
   <img alt="champPoolDB" title="champPoolDB" src="views/images/bannerGithub.png" width="100%">
 
@@ -5,18 +6,14 @@
   Your personal League of Legends champion-pool database.
 </p>
 
-  [Check out the demo!](https://champpooldb.herokuapp.com/)
 </p>
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
 - [Feedback](#feedback)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction
 
@@ -24,6 +21,7 @@
 
 An API to view your champions, add new champions, and get your stats for each champ - all in one database and 100% open source. 
 This was created during my time as a student at Code Chrysalis
+[You can check out the demo here!](https://champpooldb.herokuapp.com/)
 
 ## Features
 
